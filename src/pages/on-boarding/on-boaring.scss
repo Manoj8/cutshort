@@ -1,0 +1,156 @@
+.on-boarding {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  .section {
+    margin: 25px;
+    justify-content: center;
+  }
+
+  .logo {
+    position: relative;
+    right: 7px;
+    top: 7px;
+  }
+
+  .progress-container {
+    display: flex;
+    position: relative;
+    width: 350px;
+    justify-content: space-between;
+
+    .stepper {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+      border: 1px solid #f5f7fa;
+      background: white;
+      color: black;
+    }
+
+    .progress {
+      position: absolute;
+      top: 50%;
+      margin: 0px;
+      padding: 0px;
+      border: none;
+      border-bottom: 1px solid rgb(239, 241, 247);
+    }
+
+    .completed-pbar {
+      border-bottom: 1px solid rgb(102, 77, 229);
+    }
+
+    .progress-completed {
+      background: #664de5;
+      color: white;
+      cursor: pointer;
+    }
+  }
+
+  .heading {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .sub-heading {
+    margin: 0px;
+    text-align: center;
+    color: #69758e;
+    font-weight: 500;
+  }
+
+  .field-name {
+    font-weight: 500;
+  }
+
+  .form-field {
+    margin: 5px 0px;
+  }
+
+  .text-field {
+    padding: 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  .input-field {
+    display: flex;
+  }
+
+  .text-field::placeholder {
+    color: #a5afc3;
+  }
+
+  .ghost-white {
+    font-weight: normal;
+    color: #a5afc3;
+  }
+  .planning {
+    display: flex;
+    width: 350px;
+  }
+
+  .plan {
+    border: 1px solid;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+
+    .plan-for {
+      margin: 10px 0px;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .user-icon {
+      margin: 10px 0px;
+      width: 25px;
+      height: 20px;
+    }
+  }
+
+  .selected-plan,
+  .plan:hover {
+    border-color: #664de5;
+    cursor: pointer;
+    .user-icon {
+      color: #664de5;
+    }
+  }
+
+  .completed {
+    width: 55px;
+    height: 55px;
+    background: #664de5;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    color: white;
+  }
+
+  .submit-btn {
+    width: 350px;
+    background-color: #664de5;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+}
