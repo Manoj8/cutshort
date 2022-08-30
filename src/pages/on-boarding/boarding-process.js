@@ -1,5 +1,6 @@
 import React from "react";
 import FormField from "./form-field";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class BoardingProcess extends React.Component {
@@ -19,7 +20,7 @@ class BoardingProcess extends React.Component {
       <div className="section">
         {secIndex < 2
           ? activeSection["formDetails"]?.map((field) => {
-              return <FormField field={field} formData={formData} updateData={this.updateData} />;
+              return <FormField key={field.name} field={field} formData={formData} updateData={this.updateData} />;
             })
           : secIndex === 2 && (
               <div className="planning">
@@ -42,7 +43,9 @@ class BoardingProcess extends React.Component {
             )}
 
         {sectionNames[secIndex] === "launch" ? (
-          <button className="submit-btn">Launch Eden</button>
+          <button className="submit-btn" onClick={this.props.setEden}>
+            Launch Eden
+          </button>
         ) : (
           <button className="submit-btn" onClick={() => this.props.handleChange("secIndex", secIndex + 1)} disabled={disabled}>
             Create WorkSpace

@@ -1,6 +1,6 @@
 import React from "react";
 import BoardingProcess from "./boarding-process";
-import Logo from "../../images/logo.jpg";
+import Logo from "../../images/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faUsers, faCheck } from "@fortawesome/free-solid-svg-icons";
 import "./on-boaring.scss";
@@ -60,7 +60,7 @@ class OnBoarding extends React.Component {
         ],
       },
       planning: {
-        heading: `How are you planning to use ${formValues.workSpaceName}?`,
+        heading: `How are you planning to use Eden?`,
         subHeading: "We'll streamline your experience accordingly.",
         formDetails: [
           { planFor: "For myself", desc: "Write better. Think more clearly. Stay organized", userIcn: faUser },
@@ -118,7 +118,7 @@ class OnBoarding extends React.Component {
           <p className="sub-heading">{activeSection["subHeading"]}</p>
         </div>
 
-        <BoardingProcess secIndex={secIndex} activeSection={activeSection} sectionNames={sectionNames} formData={formValues} handleChange={this.handleChange} />
+        <BoardingProcess secIndex={secIndex} activeSection={activeSection} sectionNames={sectionNames} formData={formValues} handleChange={this.handleChange} setEden={this.props.setEden} />
       </div>
     );
   }

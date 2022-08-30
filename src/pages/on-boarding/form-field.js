@@ -5,7 +5,7 @@ export default class FormField extends Component {
     const { field, formData } = this.props;
     const isURLField = field.name === "workSpaceURL";
     return (
-      <div className="form-field" key={field.name}>
+      <div className="form-field">
         <p className="fieldData-name">
           {field.desc}
           {isURLField && <span className="ghost-white"> (optional)</span>}
