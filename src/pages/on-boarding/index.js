@@ -76,8 +76,8 @@ class OnBoarding extends React.Component {
     const sectionNames = Object.keys(sections);
     const activeSection = sections[sectionNames[secIndex]];
 
-    let barWidth = (350 * secIndex) / 3;
-    barWidth = secIndex < 3 ? barWidth + 350 / 6 : barWidth;
+    let barWidth = (340 * secIndex) / 3;
+    barWidth = secIndex < 3 ? barWidth + 340 / 6 : barWidth;
     return (
       <div className="on-boarding">
         <div className="section">
@@ -89,7 +89,7 @@ class OnBoarding extends React.Component {
         <div className="section">
           <div className="progress-container">
             <hr className="progress completed-pbar" style={{ width: barWidth, left: "0px" }} />
-            <hr className="progress" style={{ width: 350 - barWidth, left: barWidth }} />
+            <hr className="progress" style={{ width: 340 - barWidth, left: barWidth }} />
 
             {sectionNames?.map((section, index) => {
               return (
